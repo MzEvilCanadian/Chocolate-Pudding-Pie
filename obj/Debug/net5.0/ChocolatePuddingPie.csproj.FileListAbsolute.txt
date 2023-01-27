@@ -1,0 +1,9 @@
+C:\Users\Amber-PC2\source\repos\Chocolate Pudding Pie\Chocolate Pudding Pie\bin\Debug\net5.0\ChocolatePuddingPie.deps.json
+C:\Users\Amber-PC2\source\repos\Chocolate Pudding Pie\Chocolate Pudding Pie\bin\Debug\net5.0\ChocolatePuddingPie.dll
+C:\Users\Amber-PC2\source\repos\Chocolate Pudding Pie\Chocolate Pudding Pie\bin\Debug\net5.0\ChocolatePuddingPie.pdb
+C:\Users\Amber-PC2\source\repos\Chocolate Pudding Pie\Chocolate Pudding Pie\obj\Debug\net5.0\ChocolatePuddingPie.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Amber-PC2\source\repos\Chocolate Pudding Pie\Chocolate Pudding Pie\obj\Debug\net5.0\ChocolatePuddingPie.AssemblyInfoInputs.cache
+C:\Users\Amber-PC2\source\repos\Chocolate Pudding Pie\Chocolate Pudding Pie\obj\Debug\net5.0\ChocolatePuddingPie.AssemblyInfo.cs
+C:\Users\Amber-PC2\source\repos\Chocolate Pudding Pie\Chocolate Pudding Pie\obj\Debug\net5.0\ChocolatePuddingPie.csproj.CoreCompileInputs.cache
+C:\Users\Amber-PC2\source\repos\Chocolate Pudding Pie\Chocolate Pudding Pie\obj\Debug\net5.0\ChocolatePuddingPie.dll
+C:\Users\Amber-PC2\source\repos\Chocolate Pudding Pie\Chocolate Pudding Pie\obj\Debug\net5.0\ChocolatePuddingPie.pdb

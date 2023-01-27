@@ -37,9 +37,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Amber-PC2\\source\\repos\\Chocolate Pudding Pie\\Chocolate Pudding Pie\\Chocolate Pudding Pie.csproj",
-      "projectName": "Chocolate Pudding Pie",
-      "projectPath": "C:\\Users\\Amber-PC2\\source\\repos\\Chocolate Pudding Pie\\Chocolate Pudding Pie\\Chocolate Pudding Pie.csproj",
+      "projectUniqueName": "C:\\Users\\Amber-PC2\\source\\repos\\Chocolate Pudding Pie\\Chocolate Pudding Pie\\ChocolatePuddingPie.csproj",
+      "projectName": "ChocolatePuddingPie",
+      "projectPath": "C:\\Users\\Amber-PC2\\source\\repos\\Chocolate Pudding Pie\\Chocolate Pudding Pie\\ChocolatePuddingPie.csproj",
       "packagesPath": "C:\\Users\\Amber-PC2\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Amber-PC2\\source\\repos\\Chocolate Pudding Pie\\Chocolate Pudding Pie\\obj\\",
       "projectStyle": "PackageReference",

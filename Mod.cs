@@ -11,6 +11,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using UnityEngine;
+using System;
 using ItemReference = KitchenLib.References.ItemReferences;
 
 namespace ChocolatePuddingPie
@@ -61,6 +62,7 @@ namespace ChocolatePuddingPie
         internal static bool debug = true;
         public static void LogInfo(string _log) { Debug.Log($"[{MOD_NAME}] " + _log); }
         public static void LogInfo(object _log) { LogInfo(_log.ToString()); }
+        public static void LogError(object _log) { LogError(_log.ToString()); }
 
         public Mod() : base(MOD_ID, MOD_NAME, MOD_AUTHOR, MOD_VERSION, $"{PLATEUP_VERSION}", Assembly.GetExecutingAssembly())
         {
@@ -72,29 +74,40 @@ namespace ChocolatePuddingPie
 
         public override void PostActivate(KitchenMods.Mod mod)
         {
-            //base.PostActivate(mod);
+            base.PostActivate(mod);
             // bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).ToList()[0];
 
-            AddGameDataObject<ChocolateFillingPortion>();
-            Mod.LogInfo("[Chocolate Pudding Pie] First Game Data Objects Added.");
-            AddGameDataObject<CookedFillingPot>();
-            Mod.LogInfo("[Chocolate Pudding Pie] 2nd Game Data Objects Added.");
-            AddGameDataObject<PotandChocolate>();
-            AddGameDataObject<PotChocolateandMilk>();
-            AddGameDataObject<PotChocolateMilkandButter>();
-            Mod.LogInfo("[Chocolate Pudding Pie] middle 3 Game Data Objects Added.");
-            AddGameDataObject<ChocolatePuddingPieServing>();
-            AddGameDataObject<ChocolatePuddingPieA>();
-            AddGameDataObject<ChocolatePuddingPieDish>();
-            Mod.LogInfo("[Chocolate Pudding Pie] All Game Data Objects Added.");
+            try
+            {
+                AddGameDataObject<ChocolateFillingPortion>();
+                AddGameDataObject<CookedFillingPot>();
+            }
+            catch (Exception e)
+            {
+                Mod.LogError(e.Message);
+                Mod.LogError(e.StackTrace);
+            }
+
+            try
+            {
+                AddGameDataObject<PotandChocolate>();
+                AddGameDataObject<PotChocolateandMilk>();
+                AddGameDataObject<PotChocolateMilkandButter>();
+                AddGameDataObject<ChocolatePuddingPieServing>();
+                AddGameDataObject<ChocolatePuddingPieA>();
+                AddGameDataObject<ChocolatePuddingPieDish>();
+            }
+            catch (Exception e)
+            {
+                Mod.LogError(e.Message);
+                Mod.LogError(e.StackTrace);
+            }
 
             Events.BuildGameDataEvent += delegate (object s, BuildGameDataEventArgs args)
             {
                 ModRegistry.HandleBuildGameDataEvent(args);
             };
         }
-
-        protected override void OnUpdate() { }
         private static T1 GetModdedGDO<T1, T2>() where T1 : GameDataObject
         {
             return (T1)GDOUtils.GetCustomGameDataObject<T2>().GameDataObject;

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wqHUNurAJeKQy5WmSI91NOQtnrzxZkyUNWLeqXpbT7Rd3dH1s1SgODqkboBL9vZ7E9nCXapDq2Pwjr2lcNE4wA==",
+  "dgSpecHash": "+17V/M50nefKRiiU8ojJ4yALqkt7u/VmjJXIuldKrpCF+V1FgnLycm8If4t1t/rSU9FGphcXRDGKwc8/av0reQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Amber-PC2\\source\\repos\\Chocolate Pudding Pie\\Chocolate Pudding Pie\\Chocolate Pudding Pie.csproj",
+  "projectFilePath": "C:\\Users\\Amber-PC2\\source\\repos\\Chocolate Pudding Pie\\Chocolate Pudding Pie\\ChocolatePuddingPie.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Amber-PC2\\.nuget\\packages\\yariazen.plateup.modbuildutilities\\1.5.6\\yariazen.plateup.modbuildutilities.1.5.6.nupkg.sha512"
   ],

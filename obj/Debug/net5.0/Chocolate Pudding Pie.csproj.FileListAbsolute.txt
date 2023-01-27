@@ -7,3 +7,4 @@ C:\Users\Amber-PC2\source\repos\Chocolate Pudding Pie\Chocolate Pudding Pie\obj\
 C:\Users\Amber-PC2\source\repos\Chocolate Pudding Pie\Chocolate Pudding Pie\obj\Debug\net5.0\Chocolate Pudding Pie.csproj.CoreCompileInputs.cache
 C:\Users\Amber-PC2\source\repos\Chocolate Pudding Pie\Chocolate Pudding Pie\obj\Debug\net5.0\Chocolate Pudding Pie.dll
 C:\Users\Amber-PC2\source\repos\Chocolate Pudding Pie\Chocolate Pudding Pie\obj\Debug\net5.0\Chocolate Pudding Pie.pdb
+C:\Users\Amber-PC2\source\repos\Chocolate Pudding Pie\Chocolate Pudding Pie\obj\Debug\net5.0\Chocolate Pudding Pie.csproj.AssemblyReference.cache
