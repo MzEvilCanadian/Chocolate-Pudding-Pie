@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "wqHUNurAJeKQy5WmSI91NOQtnrzxZkyUNWLeqXpbT7Rd3dH1s1SgODqkboBL9vZ7E9nCXapDq2Pwjr2lcNE4wA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Amber-PC2\\source\\repos\\Chocolate Pudding Pie\\Chocolate Pudding Pie\\Chocolate Pudding Pie.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Amber-PC2\\.nuget\\packages\\yariazen.plateup.modbuildutilities\\1.5.6\\yariazen.plateup.modbuildutilities.1.5.6.nupkg.sha512"
+  ],
+  "logs": []
+}
