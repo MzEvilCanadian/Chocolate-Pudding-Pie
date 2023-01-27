@@ -9,7 +9,7 @@ namespace ChocolatePuddingPie.Customs
     class ChocolatePuddingPieA : CustomItemGroup
     {
         public override string UniqueNameID => "ChocolatePuddingPie";
-        public override GameObject Prefab => Mod.Flour.Prefab;
+        public override GameObject Prefab => Mod.Tomato.Prefab;
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override List<ItemGroup.ItemSet> Sets => new List<ItemGroup.ItemSet>()

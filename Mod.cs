@@ -41,12 +41,12 @@ namespace ChocolatePuddingPie
         internal static Item Onion => GetExistingGDO<Item>(ItemReference.Onion);
 
         // Modded Ingredients
-        public static Item Milk => Find<Item>(IngredientLib.References.GetIngredient("Milk"));
-        public static Item MilkIngredient => Find<Item>(IngredientLib.References.GetSplitIngredient("Milk"));
-        public static Item Chocolate => Find<Item>(IngredientLib.References.GetIngredient("Chocolate"));
-        public static Item ChoppedChocolate => Find<Item>(IngredientLib.References.GetIngredient("ChoppedChocolate"));
-        public static Item ButterBlock => Find<Item>(IngredientLib.References.GetIngredient("Butter"));
-        public static Item ButterSlice => Find<Item>(IngredientLib.References.GetSplitIngredient("Butter"));
+        public static Item Milk => Find<Item>(IngredientLib.References.GetIngredient("milk"));
+        public static Item MilkIngredient => Find<Item>(IngredientLib.References.GetSplitIngredient("milk"));
+        public static Item Chocolate => Find<Item>(IngredientLib.References.GetIngredient("chocolate"));
+        public static Item ChoppedChocolate => Find<Item>(IngredientLib.References.GetIngredient("chopped chocolate"));
+        public static Item ButterBlock => Find<Item>(IngredientLib.References.GetIngredient("butter"));
+        public static Item ButterSlice => Find<Item>(IngredientLib.References.GetSplitIngredient("butter"));
 
 
         internal static ItemGroup ChocolatePuddingPieA => GetModdedGDO<ItemGroup, ChocolatePuddingPieA>();
@@ -62,6 +62,7 @@ namespace ChocolatePuddingPie
         internal static bool debug = true;
         public static void LogInfo(string _log) { Debug.Log($"[{MOD_NAME}] " + _log); }
         public static void LogInfo(object _log) { LogInfo(_log.ToString()); }
+        public static void LogError(string _log) { Debug.LogError($"[{MOD_NAME}] " + _log); }
         public static void LogError(object _log) { LogError(_log.ToString()); }
 
         public Mod() : base(MOD_ID, MOD_NAME, MOD_AUTHOR, MOD_VERSION, $"{PLATEUP_VERSION}", Assembly.GetExecutingAssembly())
@@ -74,26 +75,18 @@ namespace ChocolatePuddingPie
 
         public override void PostActivate(KitchenMods.Mod mod)
         {
+
             base.PostActivate(mod);
             // bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).ToList()[0];
 
             try
             {
                 AddGameDataObject<ChocolateFillingPortion>();
+                AddGameDataObject<ChocolatePuddingPieServing>();
                 AddGameDataObject<CookedFillingPot>();
-            }
-            catch (Exception e)
-            {
-                Mod.LogError(e.Message);
-                Mod.LogError(e.StackTrace);
-            }
-
-            try
-            {
                 AddGameDataObject<PotandChocolate>();
                 AddGameDataObject<PotChocolateandMilk>();
                 AddGameDataObject<PotChocolateMilkandButter>();
-                AddGameDataObject<ChocolatePuddingPieServing>();
                 AddGameDataObject<ChocolatePuddingPieA>();
                 AddGameDataObject<ChocolatePuddingPieDish>();
             }

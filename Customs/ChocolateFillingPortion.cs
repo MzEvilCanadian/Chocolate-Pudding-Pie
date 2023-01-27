@@ -9,7 +9,7 @@ namespace ChocolatePuddingPie.Customs
     class ChocolateFillingPortion : CustomItem
     {
         public override string UniqueNameID => "ChocolateFillingPortion";
-        public override GameObject Prefab => Mod.Milk.Prefab;         // Filler line until graphics are made
+        public override GameObject Prefab => Mod.Onion.Prefab;         // Filler line until graphics are made
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
 

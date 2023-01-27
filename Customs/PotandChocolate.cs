@@ -9,7 +9,7 @@ namespace ChocolatePuddingPie.Customs
     class PotandChocolate : CustomItemGroup
     {
         public override string UniqueNameID => "Pot and Chocolate";
-        public override GameObject Prefab => Mod.Flour.Prefab;         // Filler line until graphics are made
+        public override GameObject Prefab => Mod.Onion.Prefab;         // Filler line until graphics are made
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.Dish;
 
