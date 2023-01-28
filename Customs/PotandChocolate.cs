@@ -12,6 +12,7 @@ namespace ChocolatePuddingPie.Customs
         public override GameObject Prefab => Mod.Onion.Prefab;         // Filler line until graphics are made
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.Dish;
+        public override Item DisposesTo => Mod.Pot;
 
         public override List<ItemGroup.ItemSet> Sets => new List<ItemGroup.ItemSet>()
         {

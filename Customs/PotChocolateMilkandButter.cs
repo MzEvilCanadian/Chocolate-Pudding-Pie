@@ -12,6 +12,7 @@ namespace ChocolatePuddingPie.Customs
         public override GameObject Prefab => Mod.Onion.Prefab;         // Filler line until graphics are made
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.Dish;
+        public override Item DisposesTo => Mod.Pot;
 
         public override List<ItemGroup.ItemSet> Sets => new List<ItemGroup.ItemSet>()
         {
@@ -21,15 +22,16 @@ namespace ChocolatePuddingPie.Customs
                 Min = 1,
                 Items = new List<Item>()
                 {
-                    Mod.PotChocolateandMilk
+                    Mod.PotandChocolate
                 }
             },
             new ItemGroup.ItemSet()
             {
-                Max = 1,
-                Min = 1,
+                Max = 2,
+                Min = 2,
                 Items = new List<Item>()
                 {
+                    Mod.MilkIngredient,
                     Mod.ButterSlice
                 }
             },

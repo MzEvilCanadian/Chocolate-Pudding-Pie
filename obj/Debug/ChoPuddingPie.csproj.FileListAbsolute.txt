@@ -1,0 +1,7 @@
+C:\Users\Amber-PC2\source\repos\ChoPuddingPie\ChoPuddingPie\obj\Debug\ChoPuddingPie.csproj.AssemblyReference.cache
+C:\Users\Amber-PC2\source\repos\ChoPuddingPie\ChoPuddingPie\obj\Debug\ChoPuddingPie.csproj.CoreCompileInputs.cache
+C:\Users\Amber-PC2\source\repos\ChoPuddingPie\ChoPuddingPie\bin\Debug\ChoPuddingPie.dll.config
+C:\Users\Amber-PC2\source\repos\ChoPuddingPie\ChoPuddingPie\bin\Debug\ChoPuddingPie.dll
+C:\Users\Amber-PC2\source\repos\ChoPuddingPie\ChoPuddingPie\bin\Debug\ChoPuddingPie.pdb
+C:\Users\Amber-PC2\source\repos\ChoPuddingPie\ChoPuddingPie\obj\Debug\ChoPuddingPie.dll
+C:\Users\Amber-PC2\source\repos\ChoPuddingPie\ChoPuddingPie\obj\Debug\ChoPuddingPie.pdb

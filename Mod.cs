@@ -20,9 +20,9 @@ namespace ChocolatePuddingPie
     {
         internal const string MOD_ID = "ChocolatePuddingPie";
         internal const string MOD_NAME = "Chocolate Pudding Pie";
-        internal const string MOD_VERSION = "0.0.1";
+        internal const string MOD_VERSION = "0.0.2";
         internal const string MOD_AUTHOR = "MzEvilCanadian";
-        internal const string PLATEUP_VERSION = "1.1.2";
+        public const string MOD_GAMEVERSION = ">=1.1.3";
 
         // public static AssetBundle bundle;
 
@@ -54,7 +54,6 @@ namespace ChocolatePuddingPie
         internal static Item CookedFillingPot => GetModdedGDO<Item, CookedFillingPot>();
         internal static Item ChocolatePuddingPieServing => GetModdedGDO<Item, ChocolatePuddingPieServing>();
         internal static ItemGroup PotandChocolate => GetModdedGDO<ItemGroup, PotandChocolate>();
-        internal static ItemGroup PotChocolateandMilk => GetModdedGDO<ItemGroup, PotChocolateandMilk>();
         internal static ItemGroup PotChocolateMilkandButter => GetModdedGDO<ItemGroup, PotChocolateMilkandButter>();
 
 
@@ -65,7 +64,7 @@ namespace ChocolatePuddingPie
         public static void LogError(string _log) { Debug.LogError($"[{MOD_NAME}] " + _log); }
         public static void LogError(object _log) { LogError(_log.ToString()); }
 
-        public Mod() : base(MOD_ID, MOD_NAME, MOD_AUTHOR, MOD_VERSION, $"{PLATEUP_VERSION}", Assembly.GetExecutingAssembly())
+        public Mod() : base(MOD_ID, MOD_NAME, MOD_AUTHOR, MOD_VERSION, $"{MOD_GAMEVERSION}", Assembly.GetExecutingAssembly())
         {
             string bundlePath = Path.Combine(new string[] { Directory.GetParent(Application.dataPath).FullName, "Mods", ModID });
 
@@ -79,22 +78,14 @@ namespace ChocolatePuddingPie
             base.PostActivate(mod);
             // bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).ToList()[0];
 
-            try
-            {
                 AddGameDataObject<ChocolateFillingPortion>();
                 AddGameDataObject<ChocolatePuddingPieServing>();
                 AddGameDataObject<CookedFillingPot>();
                 AddGameDataObject<PotandChocolate>();
-                AddGameDataObject<PotChocolateandMilk>();
                 AddGameDataObject<PotChocolateMilkandButter>();
                 AddGameDataObject<ChocolatePuddingPieA>();
                 AddGameDataObject<ChocolatePuddingPieDish>();
-            }
-            catch (Exception e)
-            {
-                Mod.LogError(e.Message);
-                Mod.LogError(e.StackTrace);
-            }
+
 
             Events.BuildGameDataEvent += delegate (object s, BuildGameDataEventArgs args)
             {
