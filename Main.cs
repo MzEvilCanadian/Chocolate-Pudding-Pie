@@ -36,10 +36,6 @@ namespace ChocolatePuddingPie
         internal static Item Flour => GetExistingGDO<Item>(ItemReference.Flour);
         internal static Item PieCrust => GetExistingGDO<Item>(ItemReference.PieCrustCooked);
 
-        // Filler Prefabs
-        internal static Item Tomato => GetExistingGDO<Item>(ItemReference.Tomato);
-        internal static Item Onion => GetExistingGDO<Item>(ItemReference.Onion);
-
         // Modded Ingredients
         public static Item Chocolate => Find<Item>(IngredientLib.References.GetIngredient("chocolate"));
         public static Item ChocolateFilling => Find<Item>(IngredientLib.References.GetIngredient("chocolate sauce"));
@@ -73,7 +69,6 @@ namespace ChocolatePuddingPie
                 AddGameDataObject<ChocolatePuddingPieServing>();
                 AddGameDataObject<ChocolatePuddingPieA>();
                 AddGameDataObject<ChocolatePuddingPieDish>();
-
 
             Events.BuildGameDataEvent += delegate (object s, BuildGameDataEventArgs args)
             {
