@@ -20,7 +20,7 @@ namespace ChocolatePuddingPie
     {
         internal const string MOD_ID = "ChocolatePuddingPie";
         internal const string MOD_NAME = "Chocolate Pudding Pie";
-        internal const string MOD_VERSION = "0.0.2";
+        internal const string MOD_VERSION = "0.0.3";
         internal const string MOD_AUTHOR = "MzEvilCanadian";
         public const string MOD_GAMEVERSION = ">=1.1.3";
 
@@ -41,20 +41,12 @@ namespace ChocolatePuddingPie
         internal static Item Onion => GetExistingGDO<Item>(ItemReference.Onion);
 
         // Modded Ingredients
-        public static Item Milk => Find<Item>(IngredientLib.References.GetIngredient("milk"));
-        public static Item MilkIngredient => Find<Item>(IngredientLib.References.GetSplitIngredient("milk"));
         public static Item Chocolate => Find<Item>(IngredientLib.References.GetIngredient("chocolate"));
-        public static Item ChoppedChocolate => Find<Item>(IngredientLib.References.GetIngredient("chopped chocolate"));
-        public static Item ButterBlock => Find<Item>(IngredientLib.References.GetIngredient("butter"));
-        public static Item ButterSlice => Find<Item>(IngredientLib.References.GetSplitIngredient("butter"));
+        public static Item ChocolateFilling => Find<Item>(IngredientLib.References.GetIngredient("chocolate sauce"));
 
 
         internal static ItemGroup ChocolatePuddingPieA => GetModdedGDO<ItemGroup, ChocolatePuddingPieA>();
-        internal static Item ChocolateFillingPortion => GetModdedGDO<Item, ChocolateFillingPortion>();
-        internal static Item CookedFillingPot => GetModdedGDO<Item, CookedFillingPot>();
         internal static Item ChocolatePuddingPieServing => GetModdedGDO<Item, ChocolatePuddingPieServing>();
-        internal static ItemGroup PotandChocolate => GetModdedGDO<ItemGroup, PotandChocolate>();
-        internal static ItemGroup PotChocolateMilkandButter => GetModdedGDO<ItemGroup, PotChocolateMilkandButter>();
 
 
 
@@ -78,11 +70,7 @@ namespace ChocolatePuddingPie
             base.PostActivate(mod);
             // bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).ToList()[0];
 
-                AddGameDataObject<ChocolateFillingPortion>();
                 AddGameDataObject<ChocolatePuddingPieServing>();
-                AddGameDataObject<CookedFillingPot>();
-                AddGameDataObject<PotandChocolate>();
-                AddGameDataObject<PotChocolateMilkandButter>();
                 AddGameDataObject<ChocolatePuddingPieA>();
                 AddGameDataObject<ChocolatePuddingPieDish>();
 

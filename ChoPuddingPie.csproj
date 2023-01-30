@@ -42,14 +42,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customs\ChocolateFillingPortion.cs" />
     <Compile Include="Customs\ChocolatePuddingPieA.cs" />
     <Compile Include="Customs\ChocolatePuddingPieDish.cs" />
     <Compile Include="Customs\ChocolatePuddingPieServing.cs" />
-    <Compile Include="Customs\CookedFillingPot.cs" />
-    <Compile Include="Customs\PotandChocolate.cs" />
-    <Compile Include="Customs\PotChocolateMilkandButter.cs" />
-    <Compile Include="Mod.cs" />
+    <Compile Include="Main.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Registry\ILocalisedRecipeHolder.cs" />
     <Compile Include="Registry\ModDish.cs" />

@@ -20,7 +20,7 @@ namespace ChocolatePuddingPie.Customs
                 Min = 1,
                 Items = new List<Item>()
                 {
-                    Mod.ChocolateFillingPortion
+                    Mod.ChocolateFilling
                 }
             },
             new ItemGroup.ItemSet()

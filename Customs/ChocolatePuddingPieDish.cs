@@ -25,10 +25,7 @@ namespace ChocolatePuddingPie.Dishes
         };
         public override HashSet<Item> MinimumIngredients => new HashSet<Item>
         {
-            Mod.Milk,
-            Mod.ButterBlock,
             Mod.Chocolate,
-            Mod.Pot,
             Mod.Flour
         };
         public override HashSet<Process> RequiredProcesses => new HashSet<Process>
@@ -40,7 +37,7 @@ namespace ChocolatePuddingPie.Dishes
 
         public override Dictionary<Locale, string> Recipe => new Dictionary<Locale, string>
         {
-            { Locale.English, "Knead flour into a pie crust and cook. In a pot, combine chopped chocolate and milk then a butter slice and cook. Combine the pie crust with the chocolate filling and knead. Serves 1. " }
+            { Locale.English, "Knead flour into a pie crust and cook. Chop cholocate and met. Combine the pie crust with the chocolate filling and knead. Serves 1. " }
         };
         public override IDictionary<Locale, UnlockInfo> LocalisedInfo => new Dictionary<Locale, UnlockInfo>
         {
