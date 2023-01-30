@@ -37,7 +37,7 @@ namespace ChocolatePuddingPie.Dishes
 
         public override Dictionary<Locale, string> Recipe => new Dictionary<Locale, string>
         {
-            { Locale.English, "Knead flour into a pie crust and cook. Chop cholocate and met. Combine the pie crust with the chocolate filling and knead. Serves 1. " }
+            { Locale.English, "Knead flour into a pie crust and cook. Chop cholocate and melt. Combine the pie crust with the chocolate filling and knead. Serves 1. " }
         };
         public override IDictionary<Locale, UnlockInfo> LocalisedInfo => new Dictionary<Locale, UnlockInfo>
         {

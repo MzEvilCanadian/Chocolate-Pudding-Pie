@@ -37,7 +37,7 @@ namespace ChocolatePuddingPie.Customs
         {
             new Item.ItemProcess
             {
-                Duration = 1,
+                Duration = 0.25F,
                 Process = Main.Knead,
                 Result = Main.ChocolatePuddingPieServing
             }
