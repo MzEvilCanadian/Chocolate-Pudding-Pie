@@ -41,12 +41,12 @@ namespace ChocolatePuddingPie.Registry
                 foreach (var entry in holder.Item1.LocalisedRecipe)
                 {
                     args.gamedata.GlobalLocalisation.Recipes.Info.Get(entry.Key).Text.Add(holder.Item2, entry.Value);
-                    Mod.LogInfo($"Registered recipe \"{entry.Key}\" localization entry for dish {holder.Item2.Name} ({holder.Item2.ID}): \"{entry.Value}\"");
+                    Main.LogInfo($"Registered recipe \"{entry.Key}\" localization entry for dish {holder.Item2.Name} ({holder.Item2.ID}): \"{entry.Value}\"");
 
                 }
             }
 
-            Mod.LogInfo("Done building additional game data.");
+            Main.LogInfo("Done building additional game data.");
 
             GameDataBuilt = true;
         }
@@ -75,7 +75,7 @@ namespace ChocolatePuddingPie.Registry
                 {
                     ID = dish.ID
                 });
-                Mod.LogInfo($"Registered base dish {dish.Name} ({dish.ID})");
+                Main.LogInfo($"Registered base dish {dish.Name} ({dish.ID})");
 
             next_dish: { }
             }

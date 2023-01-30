@@ -8,8 +8,8 @@ namespace ChocolatePuddingPie.Customs
 {
     class ChocolatePuddingPieA : CustomItemGroup
     {
-        public override string UniqueNameID => "ChocolatePuddingPie";
-        public override GameObject Prefab => Mod.Tomato.Prefab;
+        public override string UniqueNameID => "ChocolatePuddingPieA";
+        public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("ChocolatePuddingPieA");
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override List<ItemGroup.ItemSet> Sets => new List<ItemGroup.ItemSet>()
@@ -20,7 +20,7 @@ namespace ChocolatePuddingPie.Customs
                 Min = 1,
                 Items = new List<Item>()
                 {
-                    Mod.ChocolateFilling
+                    Main.ChocolateFilling
                 }
             },
             new ItemGroup.ItemSet()
@@ -29,7 +29,7 @@ namespace ChocolatePuddingPie.Customs
                 Min = 1,
                 Items = new List<Item>()
                 {
-                    Mod.PieCrust
+                    Main.PieCrust
                 }
             },
         };
@@ -38,25 +38,28 @@ namespace ChocolatePuddingPie.Customs
             new Item.ItemProcess
             {
                 Duration = 1,
-                Process = Mod.Knead,
-                Result = Mod.ChocolatePuddingPieServing
+                Process = Main.Knead,
+                Result = Main.ChocolatePuddingPieServing
             }
         };
 
-        /*  public override void OnRegister(GameDataObject gameDataObject)
+          public override void OnRegister(GameDataObject gameDataObject)
           {
               var materials = new Material[]
               {
-                  MaterialUtils.GetExistingMaterial("Bread - Inside"),
+                  MaterialUtils.GetExistingMaterial("Bread - Inside Cooked"),
               };
-              MaterialUtils.ApplyMaterial(Prefab, "GameObject", materials);
-              materials[0] = MaterialUtils.GetExistingMaterial("Bread - Cooked");
-              MaterialUtils.ApplyMaterial(Prefab, "GameObject (1)", materials);
-              materials[0] = MaterialUtils.GetExistingMaterial("Olive Oil Bottle");
-              MaterialUtils.ApplyMaterial(Prefab, "GameObject (3)", materials);
+            MaterialUtils.ApplyMaterial(Prefab, "Crust/Slice 1", materials);
+            MaterialUtils.ApplyMaterial(Prefab, "Crust/Slice 2", materials);
+            MaterialUtils.ApplyMaterial(Prefab, "Crust/Slice 3", materials);
+            MaterialUtils.ApplyMaterial(Prefab, "Crust/Slice 4", materials);
 
-              // MaterialUtils.ApplyMaterial([object], [name], [material list]
-          }
-        */
+            materials[0] = MaterialUtils.GetExistingMaterial("Chocolate");
+            MaterialUtils.ApplyMaterial(Prefab, "Filling/Slice 1", materials);
+            MaterialUtils.ApplyMaterial(Prefab, "Filling/Slice 2", materials);
+            MaterialUtils.ApplyMaterial(Prefab, "Filling/Slice 3", materials);
+            MaterialUtils.ApplyMaterial(Prefab, "Filling/Slice 4", materials);
+        }
+        
     }
 }

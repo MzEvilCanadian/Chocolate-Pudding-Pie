@@ -8,31 +8,31 @@ namespace ChocolatePuddingPie.Dishes
 {
     class ChocolatePuddingPieDish : ModDish
     {
-        public override string UniqueNameID => "Chocolate Pudding Pie";
+        public override string UniqueNameID => "Chocolate Pudding Pie Dish";
         public override DishType Type => DishType.Dessert;
         public override DishCustomerChange CustomerMultiplier => DishCustomerChange.SmallDecrease;
         public override CardType CardType => CardType.Default;
-        public override Unlock.RewardLevel ExpReward => Unlock.RewardLevel.Small;
+        public override Unlock.RewardLevel ExpReward => Unlock.RewardLevel.Medium;
         public override UnlockGroup UnlockGroup => UnlockGroup.Dish;
         public override List<Dish.MenuItem> ResultingMenuItems => new List<Dish.MenuItem>
         {
             new Dish.MenuItem
             {
-                Item = Mod.ChocolatePuddingPieServing,
+                Item = Main.ChocolatePuddingPieServing,
                 Phase = MenuPhase.Dessert,
                 Weight = 1
             }
         };
         public override HashSet<Item> MinimumIngredients => new HashSet<Item>
         {
-            Mod.Chocolate,
-            Mod.Flour
+            Main.Chocolate,
+            Main.Flour
         };
         public override HashSet<Process> RequiredProcesses => new HashSet<Process>
         {
-            Mod.Cook,
-            Mod.Chop,
-            Mod.Knead
+            Main.Cook,
+            Main.Chop,
+            Main.Knead
         };
 
         public override Dictionary<Locale, string> Recipe => new Dictionary<Locale, string>

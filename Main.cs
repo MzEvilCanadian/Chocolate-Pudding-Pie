@@ -16,15 +16,15 @@ using ItemReference = KitchenLib.References.ItemReferences;
 
 namespace ChocolatePuddingPie
 {
-    public class Mod : BaseMod
+    public class Main : BaseMod
     {
         internal const string MOD_ID = "ChocolatePuddingPie";
         internal const string MOD_NAME = "Chocolate Pudding Pie";
-        internal const string MOD_VERSION = "0.0.3";
+        internal const string MOD_VERSION = "1.0.0";
         internal const string MOD_AUTHOR = "MzEvilCanadian";
         public const string MOD_GAMEVERSION = ">=1.1.3";
 
-        // public static AssetBundle bundle;
+        public static AssetBundle bundle;
 
         // Vanilla Processes
         internal static Process Cook => GetExistingGDO<Process>(ProcessReferences.Cook);
@@ -56,7 +56,7 @@ namespace ChocolatePuddingPie
         public static void LogError(string _log) { Debug.LogError($"[{MOD_NAME}] " + _log); }
         public static void LogError(object _log) { LogError(_log.ToString()); }
 
-        public Mod() : base(MOD_ID, MOD_NAME, MOD_AUTHOR, MOD_VERSION, $"{MOD_GAMEVERSION}", Assembly.GetExecutingAssembly())
+        public Main() : base(MOD_ID, MOD_NAME, MOD_AUTHOR, MOD_VERSION, $"{MOD_GAMEVERSION}", Assembly.GetExecutingAssembly())
         {
             string bundlePath = Path.Combine(new string[] { Directory.GetParent(Application.dataPath).FullName, "Mods", ModID });
 
@@ -68,7 +68,7 @@ namespace ChocolatePuddingPie
         {
 
             base.PostActivate(mod);
-            // bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).ToList()[0];
+            bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).ToList()[0];
 
                 AddGameDataObject<ChocolatePuddingPieServing>();
                 AddGameDataObject<ChocolatePuddingPieA>();
